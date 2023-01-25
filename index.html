@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Projeto Musica</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Canal de Músicas</h1>
+            <img src="https://st.depositphotos.com/1008939/2287/i/600/depositphotos_22872874-stock-photo-boy-band.jpg" alt="imagem do album da musica">
+            <div class="container_titulo_musica">
+                <div class="titulo-musica">
+                    <h2>Nome da Musica</h2>
+                    <h3>Nome do artista</h3>
+                    
+                </div>
+                <div class="container-favorito">
+                    <i class="fa-regular fa-heart"></i>
+                    
+                </div>
+               
+                
+            </div>
+            <div class="barra-progresso">
+                <div class="progresso"></div>
+            </div>
+
+            <div class="container_butons">
+                <i class="fa-solid fa-play"></i>
+                <i id="voltar" class="fa-solid fa-backward"></i>
+                <i id="play" onclick="btnPlay()" class="fa-solid fa-circle-play"></i>
+                <i id="pause" onclick="btnPause()" class="fa-solid fa-circle-pause"></i>
+                <i id="nova-musica" class="fa-solid fa-forward"></i>
+                <i id="tocar_novamente" onclick="btnTocarNovamente()" class="fa-solid fa-repeat"></i>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="https://kit.fontawesome.com/dc37c7fe1c.js" crossorigin="anonymous"></script>
+<script>
+    function btnPlay(){
+        let butaoPlay = document.getElementById('play').style.display = 'none'
+        let butaoPause = document.getElementById('pause').style.display = 'block'
+    }
+    function btnPause(){
+        let butaoPlay = document.getElementById('play').style.display = 'block'
+        let butaoPause = document.getElementById('pause').style.display = 'none'
+    }
+    function btnTocarNovamente(){
+        let btnLoop = document.getElementById('tocar_novamente').style.color = '#D400FF'
+    }
+</script>
+</html>
